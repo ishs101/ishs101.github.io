@@ -9,16 +9,17 @@
 </head>
 <body>
     <img src="/resources/school.png" width="100px" height="100px">
+    <script src="./index.js"></script>
     <h1 id="title">1-1 졸방대 예약 시스템</h1>
     <div id="zolbangdae">
         <table id="ui">
             <tr>
                 <table>
-                    <td><button type="submit" id="num1">①</button></td>
-                    <td><button type="submit" id="num2">②</button></td>
-                    <td><button type="submit" id="num3">③</button></td>
-                    <td><button type="submit" id="num4" disabled>④</button></td>
-                    <td><button type="submit" id="num5" disabled>⑤</button></td>
+                    <td><button type="submit" id="num1" onclick="openzol1()">①</button></td>
+                    <td><button type="submit" id="num2" onclick="openzol2()">②</button></td>
+                    <td><button type="submit" id="num3" onclick="openzol3()">③</button></td>
+                    <td><button type="submit" id="num4" disabled onclick="openzol4()">④</button></td>
+                    <td><button type="submit" id="num5" disabled onclick="openzol5()">⑤</button></td>
                 </table>
             </tr>
             <tr>
