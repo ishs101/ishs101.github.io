@@ -5,7 +5,7 @@ const num4 = document.getElementById("num4");
 const num5 = document.getElementById("num5");
 
 function openzol1() {
-    window.open('num1.html', '1번 졸방대 예약', 'width=300, height=500');
+    window.open('num1.php', '1번 졸방대 예약', 'width=300, height=500');
 }
 
 function openzol2() {
