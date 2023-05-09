@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./reservation.js"></script>
     <script src="./server.cjs"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
-    <form id="form1">
+    <form id="form1", action="/form1" name="form1", method="post">
         <h1 id="title_1">1번 졸방대 예약</h1>
         <input type="text" name="stunum" id="stunum" placeholder="학번" style="font-size: 20px; width: 200px;">
         <br>
@@ -23,26 +24,29 @@
             <td><input type="checkbox" name="class1" id="zol1" value="1" > 1교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol2" value="2"> 2교시</td>
+                <td><input type="checkbox" name="class1" id="zol2" value="2"> 2교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol3" value="3"> 3교시</td>
+                <td><input type="checkbox" name="class1" id="zol3" value="3"> 3교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol4" value="4"> 4교시</td>
+                <td><input type="checkbox" name="class1" id="zol4" value="4"> 4교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol5" value="5"> 5교시</td>
+                <td><input type="checkbox" name="class1" id="zol5" value="5"> 5교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol6" value="6"> 6교시</td>
+                <td><input type="checkbox" name="class1" id="zol6" value="6"> 6교시</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="list[]" id="zol7" value="7"> 7교시</td>
+                <td><input type="checkbox" name="class1" id="zol7" value="7"> 7교시</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="class1" id="test"></td>
             </tr>
         </table>
         <br>
-        <input type="submit" id="submit1" value="확인" onclick="reszol1()" style="font-size: 20px; width: 200px">
+        <input type="submit" id="submit1" value="확인" onclick="getCheckboxValue1()" style="font-size: 20px; width: 200px">
     </form>
 </body>
 </html>
