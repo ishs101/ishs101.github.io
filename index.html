@@ -10,7 +10,7 @@
 <body>
     <img src="./resources/school.png" width="100px" height="100px">
     <script src="./reservation.js"></script>
-    <script src="./server.cjs"></script>
+    <script src="./server.js"></script>
     <h1 id="title">1-1 졸방대 예약 시스템</h1>
     <div id="zolbangdae">
         <table id="ui">
@@ -20,7 +20,6 @@
                     <td><button type="submit" id="num2" onclick="openzol2()">②</button></td>
                     <td><button type="submit" id="num3" onclick="openzol3()">③</button></td>
                     <td><button type="submit" id="num4" onclick="openzol4()">④</button></td>
-                    <td><button type="submit" id="num5" onclick="openzol5()">⑤</button></td>
                 </table>
             </tr>
             <tr>
@@ -61,19 +60,23 @@
                         <p id="4class6">6교시 : 없음</p> 
                         <p id="4class7">7교시 : 없음</p>
                     </td>
-                    <td id="5">
-                        <p id="5class1">1교시 : 없음</p>
-                        <p id="5class2">2교시 : 없음</p>
-                        <p id="5class3">3교시 : 없음</p>
-                        <p id="5class4">4교시 : 없음</p>
-                        <p id="5class5">5교시 : 없음</p>
-                        <p id="5class6">6교시 : 없음</p> 
-                        <p id="5class7">7교시 : 없음</p>
-                    </td>
                 </table>
             </tr> 
+            <tr>
+                <button id="reload" onclick="reload(1); reload(2); reload(3); reload(4);">새로고침</button>
+                <script>
+                    function reload(num) {
+                        for(var i=1; i<=5; i++) {
+                            fetch('https://127.0.0.1:3000/?id=zol' + num + '&class=' + i)
+                            .then((response) => response.json())
+                            .then((data) => {
+                                document.getElementsByID(num + 'class' + i)[0].innerText = data.name;
+                        })
+                        }
+                    }
+                </script>
+            </tr>
         </table>
-        <p id="test_obj"></p>
     </div>
 </body>
 </html>
